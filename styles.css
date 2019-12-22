@@ -1,0 +1,35 @@
+body {
+    background-color: #3e3e3e;
+}
+
+h1 {
+    color: white;
+    font-family: 'Quicksand', sans-serif;
+    text-align: center;
+    padding-top: 200px;
+    opacity: 0;
+}
+
+.loading-animation {
+    text-align: center;
+    padding-top: 40px;
+    opacity: 0;
+}
+
+.loading-circle {
+    width: 25px;
+    height: 25px;
+    background: #0083ff;
+    border-radius: 25px / 25px;
+    display: inline-block;
+    margin: 0 10px;
+}
+
+h2 {
+    color: #9c9b9d;
+    font-family: 'Quicksand', sans-serif;
+    font-size: small;
+    text-align: center;
+    padding-top: 100px;
+    opacity: 0;
+}
