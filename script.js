@@ -10,7 +10,6 @@ function testAnimation() {
     anime({
         targets: '.loading-animation',
         opacity: '1',
-        delay: 1000,
         duration: 300,
         easing: 'linear',
 
@@ -18,7 +17,6 @@ function testAnimation() {
     anime({
         targets: '.loading-animation',
         translateY: [50, 0],
-        delay: 1000,
         duration: 1000,
         easing: 'easeOutElastic(1, 0.5)',
         complete: function() {
