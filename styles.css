@@ -1,0 +1,71 @@
+@font-face {
+    font-family: LatoLight;
+    src: url("assets/Lato-Light.ttf");
+}
+
+@font-face {
+    font-family: LatoBlack;
+    src: url("assets/Lato-Black.ttf");
+}
+
+@font-face {
+    font-family: LatoThin;
+    src: url("assets/Lato-Thin.ttf");
+}
+
+body {
+    margin: 0;
+    padding: 0;
+    box-sizing: content-box;
+    display: grid;
+}
+
+.intro {
+    background-color: #ECF0F6;
+    height: 600px;
+    /*white-space: nowrap;*/
+    text-align: center;
+    padding: 0;
+    margin: 0;
+    top: 0;
+}
+
+.greeting {
+    margin-top: 70px;
+}
+
+.hello, .name {
+    margin-left: auto;
+    margin-right: auto;
+    width: 9em;
+    text-align: left;
+}
+
+.hello {
+    font-family: LatoLight, serif;
+    margin-bottom: 0;
+    padding-bottom: 0;
+}
+
+.name {
+    font-family: LatoBlack, serif;
+    margin-top: 10px;
+    /*padding-top: 0;*/
+}
+
+.headshot {
+    object-fit: cover;
+    margin-top: 20px;
+    margin-bottom: 40px;
+    border-radius: 10px;
+    box-shadow: 0 19px 38px rgba(0, 0, 0, 0.30), 0 15px 12px rgba(0, 0, 0, 0.22);
+}
+
+.summary {
+    font-family: LatoThin, serif;
+    font-size: 18pt;
+    word-wrap: normal;
+    margin-left: 30px;
+    margin-right: 30px;
+    /*TODO: figure out how to limit summary width while keeping it in center*/
+}
