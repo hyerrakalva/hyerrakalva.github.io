@@ -47,7 +47,7 @@ body {
 
 .intro {
     background-color: #ECF0F6;
-    height: 600px;
+    /*height: 600px;*/
     /*white-space: nowrap;*/
     text-align: center;
     padding: 0;
@@ -99,5 +99,6 @@ body {
     word-wrap: normal;
     margin-left: 30px;
     margin-right: 30px;
+    margin-bottom: 80px;
     /*TODO: figure out how to limit summary width while keeping it in center*/
 }
