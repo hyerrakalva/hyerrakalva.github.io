@@ -132,3 +132,39 @@ body {
     opacity: 0;
     /*top: 40px;*/
 }
+
+.skills {
+    padding: 50px;
+}
+
+.skill-header {
+    font-family: LatoBold, serif;
+    font-weight: normal;
+    margin-bottom: 40px;
+}
+
+.skills ul {
+    padding-left: 0;
+    list-style-type: none;
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.skills li {
+    /*display: inline;*/
+    margin-right: 20px;
+    margin-bottom: 20px;
+    background: linear-gradient(322deg, rgba(0, 64, 201, 1) 0%, rgba(0, 181, 255, 1) 100%);
+    color: white;
+    font-family: Lato, serif;
+    border-radius: 20px;
+    padding: 10px 15px;
+    /*box-shadow: 0 3px 6px rgba(0, 0, 0, 0.16), 0 3px 6px rgba(0, 0, 0, 0.23);*/
+    box-shadow: 0 3px 6px rgba(0, 0, 0, 0.16), 0 3px 6px rgba(0, 127, 255, 0.23);
+    transform: scale(0);
+}
+
+.skills li::selection {
+    color: #338FFF;
+    background-color: white;
+}

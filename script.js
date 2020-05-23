@@ -1,10 +1,5 @@
 let load_finished = false;
-
-$(window).on("load", function() {
-    console.log('Finished loading');
-    console.log(performance.now())
-    load_finished = true;
-});
+let skills_visible = false;
 
 $(window).on('beforeunload', function() {
     $('body').hide();
@@ -90,6 +85,33 @@ function reveal_page() {
     setTimeout(scroll_indicator_animation, 2750);
 }
 
+function reveal_skills() {
+    skills_visible = true;
+    anime({
+        targets: '.skills li',
+        // duration: 500,
+        scale: [0, 1],
+        delay: anime.stagger(30)
+    })
+}
+
+function check_for_load() {
+    if (!load_finished) {
+        anime({
+            targets: '.preload-greeter',
+            duration: 1500,
+            keyframes: [
+                {color: '#b0b0b0'},
+                {color: '#000000'}
+            ],
+            easing: 'linear'
+        }).finished.then(check_for_load);
+    }
+    else {
+        reveal_page();
+    }
+}
+
 $(document).ready(setTimeout(function enter() {
     console.log("Executed greeter animation at " + performance.now());
     anime({
@@ -106,3 +128,15 @@ $(document).ready(setTimeout(function enter() {
     });
     setTimeout(check_for_load, 1250);
 }, 100));
+
+$(window).on("load", function() {
+    // console.log('Finished loading');
+    // console.log(performance.now())
+    load_finished = true;
+    let skills_observer = new IntersectionObserver(function (entries) {
+        if (entries[0].isIntersecting === true && skills_visible === false) {
+            reveal_skills();
+        }
+    }, {threshold: [0.25]});
+    skills_observer.observe(document.querySelector('.skills ul'))
+});
