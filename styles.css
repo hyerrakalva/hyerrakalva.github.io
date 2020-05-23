@@ -31,6 +31,10 @@ body {
     overflow-y: hidden;
 }
 
+h1, h2, p {
+    color: #202D4A;
+}
+
 .preloader {
     position: absolute;
     top: 0;
