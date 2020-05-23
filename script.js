@@ -113,7 +113,6 @@ function check_for_load() {
 }
 
 $(document).ready(setTimeout(function enter() {
-    console.log("Executed greeter animation at " + performance.now());
     anime({
         targets: '.preload-greeter',
         duration: 500,
@@ -130,8 +129,6 @@ $(document).ready(setTimeout(function enter() {
 }, 100));
 
 $(window).on("load", function() {
-    // console.log('Finished loading');
-    // console.log(performance.now())
     load_finished = true;
     let skills_observer = new IntersectionObserver(function (entries) {
         if (entries[0].isIntersecting === true && skills_visible === false) {
