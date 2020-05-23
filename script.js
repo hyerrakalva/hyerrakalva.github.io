@@ -11,21 +11,50 @@ $(window).on('beforeunload', function() {
     $(window).scrollTop(0);
 });
 
-function check_for_load() {
-    if (!load_finished) {
+function scroll_indicator_animation() {
+    $('.scroll-reminder').css("cursor", "initial");
+    anime({
+        targets: '.scroll-reminder',
+        duration: 400,
+        opacity: 1,
+        easing: 'linear'
+    });
+    anime({
+        targets: '.mouse-svg',
+        duration: 1000,
+        loop: 2,
+        top: ['40px', '0px'],
+        easing: 'linear',
+        changeBegin: function () {
+            anime({
+                targets: '.mouse-svg',
+                duration: 250,
+                opacity: 1,
+                endDelay: 400,
+                easing: 'linear'
+            }).finished.then(function () {
+                anime({
+                    targets: '.mouse-svg',
+                    duration: 250,
+                    opacity: 0,
+                    easing: 'linear'
+                });
+            })
+        }
+    }).finished.then(function () {
         anime({
-            targets: '.preload-greeter',
-            duration: 1500,
-            keyframes: [
-                {color: '#b0b0b0'},
-                {color: '#000000'}
-            ],
+            targets: '.mouse-svg',
+            duration: 2000,
+            top: ['40px', '0px'],
+            easing: 'easeOutCubic'
+        });
+        anime({
+            targets: '.mouse-svg',
+            duration: 250,
+            opacity: 1,
             easing: 'linear'
-        }).finished.then(check_for_load);
-    }
-    else {
-        reveal_page();
-    }
+        });
+    });
 }
 
 function reveal_page() {
@@ -58,6 +87,7 @@ function reveal_page() {
             $('.preloader').hide();
         });
     }, 750);
+    setTimeout(scroll_indicator_animation, 2750);
 }
 
 $(document).ready(setTimeout(function enter() {

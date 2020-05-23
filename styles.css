@@ -99,6 +99,26 @@ body {
     word-wrap: normal;
     margin-left: 30px;
     margin-right: 30px;
-    margin-bottom: 80px;
+    margin-bottom: 50px;
     /*TODO: figure out how to limit summary width while keeping it in center*/
+}
+
+.scroll-reminder {
+    /*text-transform: uppercase;*/
+    font-family: LatoRegular, serif;
+    font-weight: normal;
+    font-size: 11pt;
+    color: #3399FF;
+    opacity: 0;
+    cursor: default;
+}
+
+.mouse-svg {
+    width: 35px;
+    height: auto;
+    margin-bottom: 50px;
+    fill: #3399FF;
+    position: relative;
+    opacity: 0;
+    /*top: 40px;*/
 }
