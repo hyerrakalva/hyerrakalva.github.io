@@ -4,13 +4,23 @@
 }
 
 @font-face {
-    font-family: LatoBlack;
-    src: url("assets/Lato-Black.ttf");
+    font-family: LatoThin;
+    src: url("assets/Lato-Thin.ttf");
 }
 
 @font-face {
-    font-family: LatoThin;
-    src: url("assets/Lato-Thin.ttf");
+    font-family: LatoRegular;
+    src: url("assets/Lato-Regular.ttf");
+}
+
+@font-face {
+    font-family: LatoBold;
+    src: url("assets/Lato-Bold.ttf");
+}
+
+@font-face {
+    font-family: LatoBlack;
+    src: url("assets/Lato-Black.ttf");
 }
 
 body {
