@@ -61,7 +61,7 @@ function reveal_page() {
     anime({
         targets: '.preload-greeter',
         duration: 500,
-        opacity: '0',
+        opacity: 0,
         easing: 'linear'
     });
     anime({
@@ -81,7 +81,7 @@ function reveal_page() {
         anime({
             targets: '.preloader',
             duration: 500,
-            opacity: '0',
+            opacity: 0,
             easing: 'linear'
         }).finished.then(function () {
             $('.preloader').hide();
@@ -95,7 +95,7 @@ $(document).ready(setTimeout(function enter() {
     anime({
         targets: '.preload-greeter',
         duration: 500,
-        opacity: '100%',
+        opacity: 1,
         easing: 'linear'
     });
     anime({
