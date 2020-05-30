@@ -68,7 +68,7 @@ function reveal_page() {
     setTimeout(function () {
         $("body").css("overflow-y", "scroll");
         anime({
-            targets: 'img',
+            targets: '.headshot img',
             duration: 1000,
             scale: [1.15, 1],
             easing: 'easeOutCubic'
