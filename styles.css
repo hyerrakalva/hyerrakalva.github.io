@@ -67,6 +67,21 @@ h1, h2, p {
     padding: 0;
     margin: 0;
     top: 0;
+    position: relative;
+}
+
+.intro:after {
+    background: inherit;
+    bottom: 0;
+    content: '';
+    display: block;
+    height: 50%;
+    left: 0;
+    position: absolute;
+    right: 0;
+    transform: skewY(3deg);
+    transform-origin: 0;
+    z-index: -1;
 }
 
 .greeting {
@@ -130,7 +145,7 @@ h1, h2, p {
 .mouse-svg {
     width: 35px;
     height: auto;
-    margin-bottom: 50px;
+    margin-bottom: 20px;
     fill: #3399FF;
     position: relative;
     opacity: 0;
@@ -177,6 +192,20 @@ h1, h2, p {
     background-color: #ECF0F6;
     position: relative;
     padding: 20px 0;
+}
+
+.experience:before {
+    background: inherit;
+    top: 0;
+    content: '';
+    display: block;
+    height: 50%;
+    left: 0;
+    position: absolute;
+    right: 0;
+    transform: skewY(-3deg);
+    transform-origin: 0;
+    z-index: -1;
 }
 
 .experience-header {
