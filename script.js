@@ -82,7 +82,7 @@ function reveal_page() {
             $('.preloader').hide();
         });
     }, 750);
-    setTimeout(scroll_indicator_animation, 2750);
+    setTimeout(scroll_indicator_animation, 2000);
 }
 
 function reveal_skills() {
