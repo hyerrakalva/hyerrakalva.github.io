@@ -220,6 +220,7 @@ h1, h2, p {
     width: 1080px;
     height: 450px;
     position: relative;
+    opacity: 0;
 }
 
 .work {
@@ -338,6 +339,7 @@ h1, h2, p {
     padding-top: 40px;
     padding-bottom: 20px;
     user-select: none;
+    opacity: 0;
 }
 
 .dot {

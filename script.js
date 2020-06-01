@@ -1,5 +1,6 @@
 let load_finished = false;
 let skills_visible = false;
+let experience_visible = false;
 let slide_counter = {
     "experience": 0,
     "projects": 0
@@ -104,6 +105,22 @@ function reveal_skills() {
     })
 }
 
+function reveal_experience() {
+    experience_visible = true;
+    anime({
+        targets: '.experience .slideshow',
+        duration: 750,
+        translateY: [45, 0],
+        easing: 'linear'
+    })
+    anime({
+        targets: '.experience .slideshow, .experience .dot-container',
+        duration: 500,
+        opacity: [0, 1],
+        easing: 'linear'
+    });
+}
+
 function check_for_load() {
     if (!load_finished) {
         anime({
@@ -144,7 +161,13 @@ $(window).on("load", function() {
             reveal_skills();
         }
     }, {threshold: [0.25]});
-    skills_observer.observe(document.querySelector('.skills ul'))
+    let experience_observer = new IntersectionObserver(function (entries) {
+        if (entries[0].isIntersecting === true && experience_visible === false) {
+            reveal_experience();
+        }
+    }, {threshold: [0.25]});
+    skills_observer.observe(document.querySelector('.skills ul'));
+    experience_observer.observe(document.querySelector('.experience .slideshow'));
 });
 
 function set_slide(slide_num, section, direction) {
