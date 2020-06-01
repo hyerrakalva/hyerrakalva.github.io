@@ -103,21 +103,57 @@
             <span class="dot" onclick="set_slide(2, 'experience', 100)"></span>
         </div>
     </div>
-    <projects>
+    <div class="projects">
         <h1 class="project-header">Side Projects</h1>
-        <project>
-            <h2 class="project-name">Blue Bus Companion</h2>
-            <p>Blue Bus Companion is a Google Assistant app that U-M students can use on campus to get bus-related info through various voice commands. This service can be used to check whether a certain bus route is active, see how much time it will take for a certain bus to arrive at your stop, or to get directions to the closest stop of a specified route. To develop this, I used Google's Dialogflow NLP framework to extract relevant information from voice commands given to Blue Bus Companion to understand what type of information the user is requesting, and I developed fulfillment functions running on a Firebase Node.js backend to fetch the correct data from U-M Magic Bus API and deliver this information to the user in a conversational format.</p>
-        </project>
-        <project>
-            <h2 class="project-name">Site Status Notifier</h2>
-            <p>Tired of refreshing Reddit to see when the site is back up from an outage? Site Status Notifier is a CLI tool that periodically fetches data from the appropriate status tracker for a site that you specify, and when the status tracker reports that the outage has been resolved, Site Status Notifier sends you a desktop notification, whether you are on Windows or Linux with a compatible desktop environment, letting you know that the site is back up. I have designed this tool in a way that makes it very easy for me or someone else to add code to support another site/service, and it's very easy for someone to add a line or two of code to deliver the notification in another format, such as a sound or a message on their phone.</p>
-        </project>
-        <project>
-            <h2 class="project-name">Light Strip Manager</h2>
-            <p>To save money I would've spent by buying a Philips Hue light strip and the required hub, I bought a WS2812B LED strip for around 10-15 dollars and wrote a Python script on my Raspberry Pi that periodically attempted to ping my phone via Bluetooth to determine my presence in my room. The script would then control the power of the strip depending on whether I was present. I also set up a Flask server on my Raspberry Pi which would receive HTTP requests from specific IFTTT applets I made to control the master power of my LED strip. This way, if I told Google Assistant to turn off my light strip, it would send a request to my Flask server to keep my light strip turned off even if I was in the room.</p>
-        </project>
-    </projects>
+        <div class="slideshow">
+            <div class="project visible">
+                <h2>Blue Bus Companion</h2>
+                <p>Blue Bus Companion is a Google Assistant app that U-M students can use on campus to get bus-related info through various voice commands. This service can be used to check whether a certain bus route is active, see how much time it will take for a certain bus to arrive at your stop, or to get directions to the closest stop of a specified route. To develop this, I used Google's Dialogflow NLP framework to extract relevant information from voice commands given to Blue Bus Companion to understand what type of information the user is requesting, and I developed fulfillment functions running on a Firebase Node.js backend to fetch the correct data from U-M Magic Bus API and deliver this information to the user in a conversational format.</p>
+                <div class="bbus-img">
+                    <img src="assets/BlueBusCompanion.png" alt="Screenshot of Blue Bus Companion" height="450">
+                </div>
+            </div>
+            <div class="project">
+                <h2>Site Status Notifier</h2>
+                <p>Tired of refreshing Reddit to see when the site is back up from an outage? Site Status Notifier is a CLI tool that periodically fetches data from the appropriate status tracker for a site that you specify, and when the status tracker reports that the outage has been resolved, Site Status Notifier sends you a desktop notification, whether you are on Windows or Linux with a compatible desktop environment, letting you know that the site is back up. I have designed this tool in a way that makes it very easy for me or someone else to add code to support another site/service, and it's very easy for someone to add a line or two of code to deliver the notification in another format, such as a sound or a message on their phone.</p>
+                <div class="ssn-img">
+                    <img src="assets/SiteStatusNotifier_min.png" alt="Site Status Notifier in action" height="450">
+                </div>
+            </div>
+            <div class="project">
+                <h2>Light Strip Manager</h2>
+                <p>To save money I would've spent by buying a Philips Hue light strip and the required hub, I bought a WS2812B LED strip for around 10-15 dollars and wrote a Python script on my Raspberry Pi that periodically attempted to ping my phone via Bluetooth to determine my presence in my room. The script would then control the power of the strip depending on whether I was present. I also set up a Flask server on my Raspberry Pi which would receive HTTP requests from specific IFTTT applets I made to control the master power of my LED strip. This way, if I told Google Assistant to turn off my light strip, it would send a request to my Flask server to keep my light strip turned off even if I was in the room.</p>
+                <div>
+                    <img src="assets/LightStripManager.jpg" alt="Snippet of Light Strip Manger code and terminal output" height="450">
+                </div>
+            </div>
+            <div class="prev" onclick="arrow_navigate('projects', -1);">
+                <svg class="nav-arrow" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
+                     viewBox="0 0 96 96" style="enable-background:new 0 0 96 96;" xml:space="preserve">
+                    <g id="XMLID_1_">
+                        <path id="XMLID_3_" d="M72.1,42.7H36.6l13.8-13.2c2-2.1,2-5.4,0-7.5c-2-2.1-5.2-2.1-7.2,0L20.3,44.3c-1,1-1.5,2.3-1.5,3.7V48
+                            c0,1.4,0.5,2.8,1.5,3.7l22.9,22.2c2,2.1,5.2,2.1,7.2,0c2-2.1,2-5.4,0-7.5L36.6,53.3h35.5c2.8,0,5.1-2.4,5.1-5.3
+                            C77.2,45,74.9,42.7,72.1,42.7L72.1,42.7z"/>
+                    </g>
+                </svg>
+            </div>
+            <div class="next" onclick="arrow_navigate('projects', 1);">
+                <svg class="nav-arrow" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
+                     viewBox="0 0 96 96" style="enable-background:new 0 0 96 96;" xml:space="preserve">
+                    <g id="XMLID_1_">
+                        <path id="XMLID_3_" d="M72.1,42.7H36.6l13.8-13.2c2-2.1,2-5.4,0-7.5c-2-2.1-5.2-2.1-7.2,0L20.3,44.3c-1,1-1.5,2.3-1.5,3.7V48
+                            c0,1.4,0.5,2.8,1.5,3.7l22.9,22.2c2,2.1,5.2,2.1,7.2,0c2-2.1,2-5.4,0-7.5L36.6,53.3h35.5c2.8,0,5.1-2.4,5.1-5.3
+                            C77.2,45,74.9,42.7,72.1,42.7L72.1,42.7z"/>
+                    </g>
+                </svg>
+            </div>
+        </div>
+        <div class="dot-container">
+            <span class="dot active" onclick="set_slide(0, 'projects', 100)"></span>
+            <span class="dot" onclick="set_slide(1, 'projects', 100)"></span>
+            <span class="dot" onclick="set_slide(2, 'projects', 100)"></span>
+        </div>
+    </div>
     <contact>
         <h1 class="contact-header">Get in touch with me!</h1>
         <a href="https://www.gmail.com/" class="email">

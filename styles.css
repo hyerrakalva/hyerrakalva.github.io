@@ -208,7 +208,28 @@ h1, h2, p {
     z-index: -1;
 }
 
+.experience:after {
+    background: inherit;
+    bottom: 0;
+    content: '';
+    display: block;
+    height: 50%;
+    left: 0;
+    position: absolute;
+    right: 0;
+    transform: skewY(-3deg);
+    transform-origin: 100%;
+    z-index: -1;
+}
+
 .experience-header {
+    font-family: LatoBold, serif;
+    font-weight: normal;
+    margin-left: 50px;
+    margin-bottom: 40px;
+}
+
+.project-header {
     font-family: LatoBold, serif;
     font-weight: normal;
     margin-left: 50px;
@@ -223,7 +244,7 @@ h1, h2, p {
     opacity: 0;
 }
 
-.work {
+.work, .project {
     display: none;
     grid-template-columns: 1fr 0.75fr;
     grid-template-rows: 0.15fr 1fr;
@@ -237,11 +258,11 @@ h1, h2, p {
     overflow: hidden;
 }
 
-.work.visible {
+.work.visible, .project.visible {
     display: grid;
 }
 
-.work h2 {
+.work h2, .project h2 {
     grid-area: Title;
     font-family: LatoBlack, serif;
     font-weight: normal;
@@ -252,14 +273,14 @@ h1, h2, p {
     /*margin-left: 20px;*/
 }
 
-.work p {
+.work p, .project p {
     grid-area: Description;
     font-family: LatoLight, serif;
     font-size: 14pt;
     margin: 0 20px;
 }
 
-.work div {
+.work div, .project div {
     grid-area: Picture;
     overflow: hidden;
 }
@@ -276,6 +297,21 @@ h1, h2, p {
     /*transform-origin: -90px 0 0;*/
     position: relative;
     left: -90px;
+}
+
+.bbus-img {
+    background-color: #ECF0F6;
+}
+
+.bbus-img img {
+    position: relative;
+    left: 50px;
+    /*background-color: white;*/
+}
+
+.ssn-img img {
+    position: relative;
+    left: -210px;
 }
 
 .nav-arrow {
@@ -337,7 +373,6 @@ h1, h2, p {
 .dot-container {
     text-align: center;
     padding-top: 40px;
-    padding-bottom: 20px;
     user-select: none;
     opacity: 0;
 }
@@ -355,4 +390,8 @@ h1, h2, p {
 
 .dot:hover, .dot.active {
     background: #3F3F3F;
+}
+
+.projects {
+    padding-top: 100px;
 }
