@@ -377,6 +377,10 @@ h1, h2, p {
     opacity: 0;
 }
 
+.projects .dot-container {
+    margin-bottom: 50px;
+}
+
 .dot {
     cursor: pointer;
     height: 12px;
@@ -394,4 +398,62 @@ h1, h2, p {
 
 .projects {
     padding-top: 100px;
+}
+
+.contact {
+    background-color: #ECF0F6;
+    text-align: center;
+    padding-bottom: 20px;
+}
+
+.contact-header {
+    font-family: LatoBold, serif;
+    font-weight: normal;
+    font-size: 35pt;
+    margin-top: 50px;
+    margin-bottom: 40px;
+    opacity: 0;
+}
+
+.contact a {
+    margin: 0 7px;
+    text-decoration: none;
+    opacity: 0;
+}
+
+.contact a svg {
+    fill: #202D4A;
+    transition: fill 0.25s ease, transform 0.75s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+.contact a:hover svg {
+    transform: scale(1.25);
+}
+
+.contact a:active svg {
+    transform: scale(0.9);
+}
+
+.email:hover svg {
+    fill: #D44638;
+}
+
+.linkedin:hover svg {
+    fill: #0077B5;
+}
+
+.github:hover svg {
+    fill: #715da0;
+}
+
+footer {
+    background-color: #ECF0F6;
+    padding: 30px 30px 20px;
+}
+
+footer p {
+    font-family: LatoRegular, serif;
+    margin-top: 5px;
+    margin-bottom: 0;
+    padding-top: 0;
 }

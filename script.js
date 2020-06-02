@@ -2,6 +2,7 @@ let load_finished = false;
 let skills_visible = false;
 let experience_visible = false;
 let project_visible = false;
+let contact_visible = false;
 let slide_counter = {
     "experience": 0,
     "projects": 0
@@ -138,6 +139,30 @@ function reveal_projects() {
     });
 }
 
+function reveal_contact() {
+    contact_visible = true;
+    anime({
+        targets: '.contact-header',
+        duration: 500,
+        translateY: [70, 0],
+        easing: 'easeOutQuint'
+    }).finished.then(function () {
+        anime({
+            targets: '.contact a',
+            duration: 1000,
+            marginLeft: ['30px', '7px'],
+            marginRight: ['30px', '7px'],
+            opacity: [0, 1],
+            easing: 'easeOutQuint'
+        });
+    });
+    anime({
+        targets: '.contact-header',
+        duration: 750,
+        opacity: [0, 1]
+    })
+}
+
 function check_for_load() {
     if (!load_finished) {
         anime({
@@ -188,9 +213,15 @@ $(window).on("load", function() {
             reveal_projects();
         }
     }, {threshold: [0.25]});
+    let contact_observer = new IntersectionObserver(function (entries) {
+        if (entries[0].isIntersecting === true && contact_visible === false) {
+            reveal_contact();
+        }
+    }, {threshold: [1]});
     skills_observer.observe(document.querySelector('.skills ul'));
     experience_observer.observe(document.querySelector('.experience .slideshow'));
     projects_observer.observe(document.querySelector('.projects .slideshow'));
+    contact_observer.observe(document.querySelector('.contact-header'));
 });
 
 function set_slide(slide_num, section, direction) {
