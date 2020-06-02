@@ -129,7 +129,7 @@ function reveal_projects() {
         duration: 750,
         translateY: [45, 0],
         easing: 'linear'
-    })
+    });
     anime({
         targets: '.projects .slideshow, .projects .dot-container',
         duration: 500,
