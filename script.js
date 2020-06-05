@@ -169,8 +169,8 @@ function check_for_load() {
             targets: '.preload-greeter',
             duration: 1500,
             keyframes: [
-                {color: '#b0b0b0'},
-                {color: '#000000'}
+                {opacity: 0.35},
+                {opacity: 1}
             ],
             easing: 'linear'
         }).finished.then(check_for_load);

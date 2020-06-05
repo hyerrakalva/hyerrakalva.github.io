@@ -31,8 +31,16 @@ body {
     overflow-y: hidden;
 }
 
+body.dark {
+    background-color: #2D3748;
+}
+
 h1, h2, p {
     color: #202D4A;
+}
+
+.dark h1, .dark h2, .dark p {
+    color: #E2E8F0;
 }
 
 .preloader {
@@ -49,6 +57,10 @@ h1, h2, p {
     text-align: center;
 }
 
+.dark .preloader {
+    background-color: #2D3748;
+}
+
 .preload-greeter {
     position: relative;
     top: 50px;
@@ -57,6 +69,10 @@ h1, h2, p {
     font-size: 40pt;
     opacity: 0;
     color: black;
+}
+
+.dark .preload-greeter {
+    color: #E2E8F0;
 }
 
 .intro {
@@ -68,6 +84,10 @@ h1, h2, p {
     margin: 0;
     top: 0;
     position: relative;
+}
+
+.dark .intro {
+    background-color: #1A202C;
 }
 
 .intro:after {
@@ -178,9 +198,12 @@ h1, h2, p {
     font-family: LatoRegular, serif;
     border-radius: 20px;
     padding: 10px 15px;
-    /*box-shadow: 0 3px 6px rgba(0, 0, 0, 0.16), 0 3px 6px rgba(0, 0, 0, 0.23);*/
     box-shadow: 0 3px 6px rgba(0, 0, 0, 0.16), 0 3px 6px rgba(0, 127, 255, 0.23);
     transform: scale(0);
+}
+
+.dark .skills li {
+    box-shadow: 0 3px 6px rgba(0, 0, 0, 0.16), 0 3px 6px rgba(0, 127, 255, 0.3);
 }
 
 .skills li::selection {
@@ -194,7 +217,11 @@ h1, h2, p {
     padding: 20px 0;
 }
 
-.experience:before {
+.dark .experience {
+    background-color: #1A202C;
+}
+
+.experience:before, .dark .experience:before {
     background: inherit;
     top: 0;
     content: '';
@@ -208,7 +235,7 @@ h1, h2, p {
     z-index: -1;
 }
 
-.experience:after {
+.experience:after, .dark .experience:after {
     background: inherit;
     bottom: 0;
     content: '';
@@ -258,6 +285,14 @@ h1, h2, p {
     overflow: hidden;
 }
 
+.dark .work {
+    background-color: #2D3748;
+}
+
+.dark .project {
+    background-color: #1A202C;
+}
+
 .work.visible, .project.visible {
     display: grid;
 }
@@ -267,10 +302,25 @@ h1, h2, p {
     font-family: LatoBlack, serif;
     font-weight: normal;
     font-size: 20pt;
-    color: #2F3F80;
     margin: 25px 20px;
     /*margin-top: 25px;*/
     /*margin-left: 20px;*/
+}
+
+.work h2 {
+    color: #2F3F80;
+}
+
+.project h2 {
+    color: #0057B5;
+}
+
+.dark .work h2{
+    color: #6875DE;
+}
+
+.dark .project h2 {
+    color: #0067B5;
 }
 
 .work p, .project p {
@@ -303,6 +353,10 @@ h1, h2, p {
     background-color: #ECF0F6;
 }
 
+.dark .bbus-img {
+    background-color: #12181f;
+}
+
 .bbus-img img {
     position: relative;
     left: 50px;
@@ -325,6 +379,14 @@ h1, h2, p {
     cursor: pointer;*/
 }
 
+.projects .nav-arrow {
+    fill: #0057b5;
+}
+
+.dark .experience .nav-arrow {
+    fill: #6875DE;
+}
+
 .prev, .next {
     background: white;
     width: 35px;
@@ -342,23 +404,63 @@ h1, h2, p {
     transition: all 0.20s ease;
 }
 
+.dark .experience .prev, .dark .experience .next {
+    background: #2D3748;
+}
+
+.dark .projects .prev, .dark .projects .next {
+    background: #1A202C;
+}
+
 .prev:hover, .next:hover {
     transform: translateY(-23.5px);
     box-shadow: 0 7px 14px rgba(50,50,93,.1),0 3px 6px rgba(0,0,0,.08);
 }
 
-.prev:hover svg, .next:hover svg {
+.dark .experience .prev:hover, .dark .experience .next:hover {
+    background: #323b50;
+}
+
+.dark .projects .prev:hover, .dark .projects .next:hover {
+    background: #1e2632;
+}
+
+.experience .prev:hover svg, .experience .next:hover svg {
     fill: #5d66a0;
 }
 
-.prev:active svg, .next:active svg {
+.dark .experience .prev:hover svg, .dark .experience .next:hover svg {
+    fill: #7889ff;
+}
+
+.dark .experience .prev:active svg, .dark .experience .next:active svg {
+    fill: #5a64bf;
+}
+
+.experience .prev:active svg, .experience .next:active svg {
     fill: #2a3871;
+}
+
+.projects .prev:hover svg, .projects .next:hover svg {
+    fill: #006edc;
+}
+
+.projects .prev:active svg, .projects .next:active svg {
+    fill: #024797;
 }
 
 .prev:active, .next:active {
     transform: translateY(-21.5px);
     box-shadow: 0 6px 12px -2px rgba(50, 50, 93, .25), 0 3px 7px -3px rgba(0, 0, 0, .3);
     background: #ececec;
+}
+
+.dark .experience .prev:active, .dark .experience .next:active {
+    background: #262e3d;
+}
+
+.dark .projects .prev:active, .dark .projects .next:active {
+    background: #13191f;
 }
 
 .next {
@@ -392,8 +494,16 @@ h1, h2, p {
     transition: background-color 0.6s ease;
 }
 
+.dark .dot {
+    background: #3F3F3F;
+}
+
 .dot:hover, .dot.active {
     background: #3F3F3F;
+}
+
+.dark .dot:hover, .dark .dot.active {
+    background-color: #A1A1A1;
 }
 
 .projects {
@@ -404,6 +514,10 @@ h1, h2, p {
     background-color: #ECF0F6;
     text-align: center;
     padding-bottom: 20px;
+}
+
+.dark .contact {
+    background-color: #1A202C;
 }
 
 .contact-header {
@@ -426,6 +540,10 @@ h1, h2, p {
     transition: fill 0.25s ease, transform 0.75s cubic-bezier(0.16, 1, 0.3, 1);
 }
 
+.dark .contact a svg {
+    fill: #E2E8F0;
+}
+
 .contact a:hover svg {
     transform: scale(1.25);
 }
@@ -434,21 +552,25 @@ h1, h2, p {
     transform: scale(0.9);
 }
 
-.email:hover svg {
+.email:hover svg, .dark .email:hover svg {
     fill: #D44638;
 }
 
-.linkedin:hover svg {
+.linkedin:hover svg, .dark .linkedin:hover svg {
     fill: #0077B5;
 }
 
-.github:hover svg {
+.github:hover svg, .dark .github:hover svg {
     fill: #715da0;
 }
 
 footer {
     background-color: #ECF0F6;
     padding: 30px 30px 20px;
+}
+
+.dark footer {
+    background-color: #1A202C;
 }
 
 footer p {
