@@ -211,6 +211,15 @@ h1, h2, p {
     background-color: white;
 }
 
+li.soft-skill {
+    background: linear-gradient(322deg, rgba(0,113,45,1) 0%, rgba(32,206,151,1) 100%);
+    box-shadow: 0 3px 6px rgba(0, 0, 0, 0.16), 0 3px 6px rgba(1, 210, 81, 0.23);
+}
+
+.dark li.soft-skill {
+    box-shadow: 0 3px 6px rgba(0, 0, 0, 0.16), 0 3px 6px rgba(1, 210, 81, 0.3);
+}
+
 .experience {
     background-color: #ECF0F6;
     position: relative;
