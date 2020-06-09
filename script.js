@@ -77,6 +77,14 @@ function reveal_page() {
         top: '-150px',
         easing: 'easeInCirc'
     });
+    anime({
+        targets: '.loading-circle',
+        duration: 500,
+        marginLeft: ['10px', '-14.5px'],
+        marginRight: ['10px', '-14.5px'],
+        opacity: [1, 0],
+        easing: 'cubicBezier(1.000, -0.455, 0.890, 0.665)'
+    });
     setTimeout(function () {
         $("body").css("overflow-y", "scroll");
         anime({
@@ -166,13 +174,14 @@ function reveal_contact() {
 function check_for_load() {
     if (!load_finished) {
         anime({
-            targets: '.preload-greeter',
-            duration: 1500,
+            targets: '.loading-circle',
             keyframes: [
-                {opacity: 0.35},
-                {opacity: 1}
+                {translateY: -50, easing: 'cubicBezier(0.445, 0.050, 0.550, 0.950)'},
+                {translateY: 0, easing: 'cubicBezier(0.470, 0.000, 0.745, 0.715)'},
+                {translateY: 50, easing: 'cubicBezier(0.390, 0.575, 0.565, 1.000)'},
+                {translateY: 0, easing: 'spring(1, 80, 10, 0)', duration: 700},
             ],
-            easing: 'linear'
+            delay: anime.stagger(110),
         }).finished.then(check_for_load);
     }
     else {
@@ -193,7 +202,24 @@ $(document).ready(setTimeout(function enter() {
         top: '-50px',
         easing: 'easeOutCirc'
     });
-    setTimeout(check_for_load, 1250);
+    setTimeout(function () {
+        anime({
+            targets: '.loading-animation',
+            duration: 250,
+            opacity: 1,
+            easing: 'linear'
+        });
+        anime({
+            targets: '.loading-circle',
+            keyframes: [
+                {translateY: -50, easing: 'cubicBezier(0.445, 0.050, 0.550, 0.950)'},
+                {translateY: 0, easing: 'cubicBezier(0.470, 0.000, 0.745, 0.715)'},
+                {translateY: 50, easing: 'cubicBezier(0.390, 0.575, 0.565, 1.000)'},
+                {translateY: 0, easing: 'spring(1, 80, 10, 0)', duration: 700},
+            ],
+            delay: anime.stagger(110),
+        }).finished.then(check_for_load);
+    }, 250);
 }, 100));
 
 $(window).on("load", function() {
