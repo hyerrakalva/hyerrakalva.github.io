@@ -230,6 +230,7 @@ function set_slide(slide_num, section, direction) {
     }
     else {
         animation_lock = true;
+        $("body").css("overflow-x", "hidden");
     }
     if (direction === 100) {
         console.assert(slide_counter[section] !== undefined);
@@ -283,6 +284,7 @@ function set_slide(slide_num, section, direction) {
             opacity: [0, 1],
             easing: 'linear'
         }).finished.then(function () {
+            $("body").css("overflow-x", "auto");
             animation_lock = false;
         });
         slide_counter[section] = slide_num;

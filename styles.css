@@ -44,7 +44,7 @@ h1, h2, p {
 }
 
 .preloader {
-    position: absolute;
+    position: fixed;
     top: 0;
     left: 0;
     width: 100%;
@@ -69,6 +69,12 @@ h1, h2, p {
     font-size: 40pt;
     opacity: 0;
     color: black;
+}
+
+@media only screen and (max-width: 500px) {
+    .preload-greeter {
+        font-size: 30pt;
+    }
 }
 
 .dark .preload-greeter {
@@ -176,10 +182,23 @@ h1, h2, p {
     padding: 50px;
 }
 
+@media only screen and (max-width: 500px) {
+    .skills {
+        padding: 30px;
+    }
+}
+
 .skill-header {
     font-family: LatoBold, serif;
     font-weight: normal;
     margin-bottom: 40px;
+}
+
+@media only screen and (max-width: 500px) {
+    .skill-header {
+        margin-bottom: 30px;
+        margin-top: 0;
+    }
 }
 
 .skills ul {
@@ -200,6 +219,13 @@ h1, h2, p {
     padding: 10px 15px;
     box-shadow: 0 3px 6px rgba(0, 0, 0, 0.16), 0 3px 6px rgba(0, 127, 255, 0.23);
     transform: scale(0);
+}
+
+@media only screen and (max-width: 500px){
+    .skills li {
+        margin-right: 15px;
+        margin-bottom: 15px;
+    }
 }
 
 .dark .skills li {
@@ -265,11 +291,23 @@ li.soft-skill {
     margin-bottom: 40px;
 }
 
+@media only screen and (max-width: 500px){
+    .experience-header {
+        margin-left: 30px;
+    }
+}
+
 .project-header {
     font-family: LatoBold, serif;
     font-weight: normal;
     margin-left: 50px;
     margin-bottom: 40px;
+}
+
+@media only screen and (max-width: 500px){
+    .project-header {
+        margin-left: 30px;
+    }
 }
 
 .slideshow {
@@ -278,6 +316,32 @@ li.soft-skill {
     height: 450px;
     position: relative;
     opacity: 0;
+}
+
+@media only screen and (max-width: 1100px){
+    .slideshow {
+        width: 945px;
+    }
+}
+
+@media only screen and (max-width: 962px) {
+    .slideshow {
+        margin: 0 5px;
+        width: auto;
+        height: 450px;
+    }
+}
+
+@media only screen and (max-width: 500px) {
+    .slideshow {
+        height: 500px;
+    }
+}
+
+@media only screen and (max-width: 390px) {
+    .slideshow {
+        height: 575px;
+    }
 }
 
 .work, .project {
@@ -292,6 +356,35 @@ li.soft-skill {
     box-shadow: 2px 15px 50px 0px rgba(0,0,0,0.16);
     border-radius: 20px;
     overflow: hidden;
+}
+
+@media only screen and (max-width: 1100px) {
+    .work, .project {
+        margin: 0 22.5px;
+    }
+}
+
+@media only screen and (max-width: 962px) {
+    .work, .project {
+        margin: 0 22.5px;
+        width: auto;
+        height: 450px;
+        grid-template-columns: 1fr;
+        grid-template-rows: 0.15fr 1fr;
+        grid-template-areas: "Title" "Description";
+    }
+}
+
+@media only screen and (max-width: 500px) {
+    .work, .project {
+        height: 500px;
+    }
+}
+
+@media only screen and (max-width: 390px) {
+    .work, .project {
+        height: 575px;
+    }
 }
 
 .dark .work {
@@ -314,6 +407,25 @@ li.soft-skill {
     margin: 25px 20px;
     /*margin-top: 25px;*/
     /*margin-left: 20px;*/
+}
+
+@media only screen and (max-width: 1100px) {
+    .work h2, .project h2 {
+        margin: 25px 30px;
+    }
+}
+
+@media only screen and (max-width: 962px) {
+    .work h2, .project h2 {
+        margin: 25px 30px 15px;
+    }
+}
+
+@media only screen and (max-width: 500px) {
+    .work h2, .project h2 {
+        font-size: 17pt;
+        margin: 25px 30px 15px;
+    }
 }
 
 .work h2 {
@@ -339,9 +451,35 @@ li.soft-skill {
     margin: 0 20px;
 }
 
+@media only screen and (max-width: 1100px) {
+    .work p, .project p {
+        margin: 0 30px;
+    }
+}
+
+@media only screen and (max-width: 570px) {
+    .work p, .project p {
+        margin: 0 30px;
+        font-size: 13pt;
+    }
+}
+
+@media only screen and (max-width: 500px) {
+    .work p, .project p {
+        margin: 0 30px;
+        font-size: 12pt;
+    }
+}
+
 .work div, .project div {
     grid-area: Picture;
     overflow: hidden;
+}
+
+@media only screen and (max-width: 962px) {
+    .work div, .project div {
+        display: none;
+    }
 }
 
 .atlas-img img {
@@ -519,6 +657,12 @@ li.soft-skill {
     padding-top: 100px;
 }
 
+@media only screen and (max-width: 500px){
+    .projects {
+        padding-top: 30px;
+    }
+}
+
 .contact {
     background-color: #ECF0F6;
     text-align: center;
@@ -536,6 +680,12 @@ li.soft-skill {
     margin-top: 50px;
     margin-bottom: 40px;
     opacity: 0;
+}
+
+@media only screen and (max-width: 500px) {
+    .contact-header {
+        font-size: 10vw;
+    }
 }
 
 .contact a {
