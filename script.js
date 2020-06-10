@@ -190,6 +190,9 @@ function check_for_load() {
 }
 
 $(document).ready(setTimeout(function enter() {
+    if (window.matchMedia("(prefers-color-scheme: dark)").matches) {
+        document.body.classList.add('dark');
+    }
     anime({
         targets: '.preload-greeter',
         duration: 500,
