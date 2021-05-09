@@ -278,6 +278,7 @@ function set_slide(slide_num, section, direction) {
             direction = -1;
         }
         else {
+            animation_lock = false;
             return;
         }
     }
