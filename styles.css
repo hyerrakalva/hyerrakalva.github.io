@@ -512,6 +512,11 @@ li.soft-skill {
     left: -90px;
 }
 
+.ford-cont-img img {
+    position: relative;
+    left: -165px;
+}
+
 .bbus-img {
     background-color: #ECF0F6;
 }

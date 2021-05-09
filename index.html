@@ -79,6 +79,13 @@
                 </div>
             </div>
             <div class="work">
+                <h2>Ford Motor Company (cont.)</h2>
+                <p>During Summer 2020 I worked with the SYNC in-vehicle infotainment team at Ford. I was tasked with developing a Python tool that parses QNX kernel event trace data from raw binary files, with the help of the Kaitai Struct framework. I added the ability to export the parsed trace data to a new file format which was much quicker to read from compared to the original binary file, resulting in a 1200x speedup when accessing trace data originating from the same file more than once. I also created options within the tool to filter data by the state that processes were blocked in, as well as the actual process being blocked upon. Using the stats outputted by my tool, I was able to pinpoint several SYNC-related processes that were facing a significant performance degrade as a result of being blocked upon I/O related processes.</p>
+                <div class="ford-cont-img">
+                    <img src="assets/2020-ford-mustang-mach-e.jpg" alt="Mustang Mach-E Dashboard" height="450">
+                </div>
+            </div>
+            <div class="work">
                 <h2>U-M Autonomous Robotic Vehicle</h2>
                 <p>The U-M Autonomous Robotic Vehicle (formerly known as Intelligent Ground Vehicle) team aims to build a fully autonomous robot to compete at the Intelligent Ground Vehicle Competition at Oakland University every June. I have been part of the Computer Vision sector since August 2018, and as part of this sector, I have helped make good use of the ZED stereo camera along with CUDA-enabled OpenCV libraries to detect white lines in front of the robot and generate an optimal path using this information.</p>
                 <div>
@@ -110,6 +117,7 @@
             <span class="dot active" onclick="set_slide(0, 'experience', 100)"></span>
             <span class="dot" onclick="set_slide(1, 'experience', 100)"></span>
             <span class="dot" onclick="set_slide(2, 'experience', 100)"></span>
+            <span class="dot" onclick="set_slide(3, 'experience', 100)"></span>
         </div>
     </div>
     <div class="projects">
