@@ -129,6 +129,12 @@ function reveal_experience() {
         opacity: [0, 1],
         easing: 'linear'
     });
+    anime({
+        targets: '.experience .work.visible img',
+        duration: 1000,
+        scale: [1.1, 1.0],
+        easing: 'easeOutCubic'
+    });
 }
 
 function reveal_projects() {
@@ -144,6 +150,12 @@ function reveal_projects() {
         duration: 500,
         opacity: [0, 1],
         easing: 'linear'
+    });
+    anime({
+        targets: '.projects .project.visible img',
+        duration: 1000,
+        scale: [1.1, 1.0],
+        easing: 'easeOutCubic'
     });
 }
 
