@@ -237,7 +237,7 @@ h1, h2, p {
     transform: scale(0);
 }
 
-@media only screen and (max-width: 500px){
+@media only screen and (max-width: 500px) {
     .skills li {
         margin-right: 15px;
         margin-bottom: 15px;
@@ -254,7 +254,7 @@ h1, h2, p {
 }
 
 li.soft-skill {
-    background: linear-gradient(322deg, rgba(0,113,45,1) 0%, rgba(32,206,151,1) 100%);
+    background: linear-gradient(322deg, rgba(0, 113, 45, 1) 0%, rgba(32, 206, 151, 1) 100%);
     box-shadow: 0 3px 6px rgba(0, 0, 0, 0.16), 0 3px 6px rgba(1, 210, 81, 0.23);
 }
 
@@ -307,7 +307,7 @@ li.soft-skill {
     margin-bottom: 40px;
 }
 
-@media only screen and (max-width: 500px){
+@media only screen and (max-width: 500px) {
     .experience-header {
         margin-left: 30px;
     }
@@ -320,7 +320,7 @@ li.soft-skill {
     margin-bottom: 40px;
 }
 
-@media only screen and (max-width: 500px){
+@media only screen and (max-width: 500px) {
     .project-header {
         margin-left: 30px;
     }
@@ -334,7 +334,7 @@ li.soft-skill {
     opacity: 0;
 }
 
-@media only screen and (max-width: 1100px){
+@media only screen and (max-width: 1100px) {
     .slideshow {
         width: 945px;
     }
@@ -369,7 +369,7 @@ li.soft-skill {
     width: 900px;
     height: 450px;
     margin: 0 90px;
-    box-shadow: 2px 15px 50px 0px rgba(0,0,0,0.16);
+    box-shadow: 2px 15px 50px 0px rgba(0, 0, 0, 0.16);
     border-radius: 20px;
     overflow: hidden;
 }
@@ -452,7 +452,7 @@ li.soft-skill {
     color: #0057B5;
 }
 
-.dark .work h2{
+.dark .work h2 {
     color: #6875DE;
 }
 
@@ -582,7 +582,7 @@ li.soft-skill {
 
 .prev:hover, .next:hover {
     transform: translateY(-23.5px);
-    box-shadow: 0 7px 14px rgba(50,50,93,.1),0 3px 6px rgba(0,0,0,.08);
+    box-shadow: 0 7px 14px rgba(50, 50, 93, .1), 0 3px 6px rgba(0, 0, 0, .08);
 }
 
 .dark .experience .prev:hover, .dark .experience .next:hover {
@@ -678,7 +678,7 @@ li.soft-skill {
     padding-top: 100px;
 }
 
-@media only screen and (max-width: 500px){
+@media only screen and (max-width: 500px) {
     .projects {
         padding-top: 30px;
     }

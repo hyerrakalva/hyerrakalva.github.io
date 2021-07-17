@@ -13,7 +13,7 @@ let slide_name = {
 };
 let animation_lock = false;
 
-$(window).on('beforeunload', function() {
+$(window).on('beforeunload', function () {
     $('body').hide();
     $(window).scrollTop(0);
 });
@@ -245,7 +245,7 @@ $(document).ready(setTimeout(function enter() {
     }, 250);
 }, 100));
 
-$(window).on("load", function() {
+$(window).on("load", function () {
     load_finished = true;
     let skills_observer = new IntersectionObserver(function (entries) {
         if (entries[0].isIntersecting === true && skills_visible === false) {
